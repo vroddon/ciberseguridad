@@ -1,5 +1,5 @@
-# ciberseguridadLote4
-Código generado para las distintas tareas del proyecto "Lote 4 del proyecto: Servicios de obtención y clasificación de información para la caracterización del sector de la ciberseguridad"
+# Ontología ciberseguridad
+Código de la ontología de ciberseguridad desarrollada durante el proyecto "Lote 4 del proyecto: Servicios de obtención y clasificación de información para la caracterización del sector de la ciberseguridad"
 
 
 Los resultados del proyecto son accesibles en las siguientes direcciones:
