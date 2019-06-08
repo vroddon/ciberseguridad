@@ -1,0 +1,338 @@
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridad> <http://www.w3.org/2002/07/owl#imports> <http://contsem.unizar.es/def/sector-publico/pproc> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridad> <http://www.w3.org/2002/07/owl#imports> <http://data.epo.org/linked-data/def/patent/> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridad> <http://www.w3.org/2002/07/owl#imports> <http://minetur.linkeddata.es/def/ontologiaProductos#> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridad> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/ontology/bibo/> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridad> <http://www.w3.org/2002/07/owl#imports> <http://usefulinc.com/ns/doap#> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridad> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/org#> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridad> <http://purl.org/dc/terms/contributor> "Socorro Bernardos (OEG-UPM)\nMar\u00EDa Poveda-Villal\u00F3n (OEG-UPM)\nEdna Ruckhaus (OEG-UPM)" .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridad> <http://purl.org/dc/terms/creator> "Mari Carmen Su\u00E1rez-Figueroa (OEG-UPM)" .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridad> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridad> <http://www.w3.org/2000/01/rdf-schema#comment> "Esta ontolog\u00EDa de ciberseguridad se basa en (a) la actualizaci\u00F3n y mejora de una ontolog\u00EDa existente de productos de ciberseguridad (http://minetur.linkeddata.es/def/ontologiaProductos), y (b) su extensi\u00F3n a partir de nuevas clasificaciones, incluyendo mappings y sin\u00F3nimos, as\u00ED como t\u00E9rminos extra\u00EDdos de los corpus disponibles."@es .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridad> <http://www.w3.org/2000/01/rdf-schema#label> "Ontologia de Ciberseguridad"@es .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadcallsFor
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadcallsFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadcallsFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadPublicOrganization> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadcallsFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/procurement/public-contracts#Tender> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadcallsFor> <http://www.w3.org/2000/01/rdf-schema#comment> "A public organization calls for a tender."@en .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadcallsFor> <http://www.w3.org/2000/01/rdf-schema#comment> "Una Organizacion Publica convoca una Licitacion."@es .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadcallsFor> <http://www.w3.org/2000/01/rdf-schema#label> "callsFor"@en .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadcallsFor> <http://www.w3.org/2000/01/rdf-schema#label> "convoca"@es .
+# 
+# http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhas
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhas> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhas> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadGood> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhas> <http://www.w3.org/2000/01/rdf-schema#range> <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadFunctionality> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhas> <http://www.w3.org/2000/01/rdf-schema#comment> "A Good has associated a Functionality"@en .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhas> <http://www.w3.org/2000/01/rdf-schema#comment> "Un Bien tiene asociadas Funcionalidades"@es .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhas> <http://www.w3.org/2000/01/rdf-schema#label> "has"@en .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhas> <http://www.w3.org/2000/01/rdf-schema#label> "tiene"@es .
+# 
+# http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhasAssociated
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhasAssociated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhasAssociated> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhasAssociated> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/procurement/public-contracts#Tender> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhasAssociated> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/procurement/public-contracts#Contract> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhasAssociated> <http://www.w3.org/2000/01/rdf-schema#comment> "A Tender has associated a Contract."@en .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhasAssociated> <http://www.w3.org/2000/01/rdf-schema#comment> "Una Licitacion tiene asociado un Contrato."@es .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhasAssociated> <http://www.w3.org/2000/01/rdf-schema#label> "hasAssociated"@en .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhasAssociated> <http://www.w3.org/2000/01/rdf-schema#label> "tiene asociado"@es .
+# 
+# http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhasClassificationCode
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhasClassificationCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhasClassificationCode> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhasClassificationCode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadGood> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhasClassificationCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadClassificationCode> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhasClassificationCode> <http://www.w3.org/2000/01/rdf-schema#label> "hasClassificationCode"@en .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhasClassificationCode> <http://www.w3.org/2000/01/rdf-schema#label> "tieneCodigoDeClasificacion"@es .
+# 
+# http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhasClassificationCodeofPatent
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhasClassificationCodeofPatent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhasClassificationCodeofPatent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadPattentApplication> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhasClassificationCodeofPatent> <http://www.w3.org/2000/01/rdf-schema#range> <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadClassificationCode> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhasClassificationCodeofPatent> <http://www.w3.org/2000/01/rdf-schema#label> "hasClassificationCodeOfPatent"@en .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhasClassificationCodeofPatent> <http://www.w3.org/2000/01/rdf-schema#label> "tieneCodigodeClasificacion"@es .
+# 
+# http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhasClassificationCodeofTender
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhasClassificationCodeofTender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhasClassificationCodeofTender> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/procurement/public-contracts#Tender> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhasClassificationCodeofTender> <http://www.w3.org/2000/01/rdf-schema#range> <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadClassificationCode> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhasClassificationCodeofTender> <http://www.w3.org/2000/01/rdf-schema#label> "hasClassificationCodeOfTender"@en .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhasClassificationCodeofTender> <http://www.w3.org/2000/01/rdf-schema#label> "tieneCodigodeClasificacion"@es .
+# 
+# http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadinvolves
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadinvolves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadinvolves> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/procurement/public-contracts#Contract> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadinvolves> <http://www.w3.org/2000/01/rdf-schema#range> <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadGood> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadinvolves> <http://www.w3.org/2000/01/rdf-schema#comment> "A Contract involves a Good"@en .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadinvolves> <http://www.w3.org/2000/01/rdf-schema#comment> "Un Contrato involucra un Bien"@es .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadinvolves> <http://www.w3.org/2000/01/rdf-schema#label> "involucra"@es .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadinvolves> <http://www.w3.org/2000/01/rdf-schema#label> "involves"@en .
+# 
+# http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadisAffectedBy
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadisAffectedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadisAffectedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadGood> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadisAffectedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadPattentApplication> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadisAffectedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "A Good is affected by a Patent"@en .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadisAffectedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Un Bien esta afectado por una Patente"@es .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadisAffectedBy> <http://www.w3.org/2000/01/rdf-schema#label> "estaAfectadoPor"@es .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadisAffectedBy> <http://www.w3.org/2000/01/rdf-schema#label> "isAffectedBy"@en .
+# 
+# http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadisOwnerOF
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadisOwnerOF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadisOwnerOF> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Organization> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadisOwnerOF> <http://www.w3.org/2000/01/rdf-schema#range> <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadPattentApplication> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadisOwnerOF> <http://www.w3.org/2000/01/rdf-schema#comment> "An Organization is owner of a Patent (PatentApplication)."@en .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadisOwnerOF> <http://www.w3.org/2000/01/rdf-schema#comment> "Una Organizaci\u00F3n es propietaria de una Patente."@es .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadisOwnerOF> <http://www.w3.org/2000/01/rdf-schema#label> "es propietario de"@es .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadisOwnerOF> <http://www.w3.org/2000/01/rdf-schema#label> "isOwnerOf"@en .
+# 
+# http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadoffers
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadoffers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadoffers> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Organization> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadoffers> <http://www.w3.org/2000/01/rdf-schema#range> <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadGood> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadoffers> <http://www.w3.org/2000/01/rdf-schema#comment> ""@es .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadoffers> <http://www.w3.org/2000/01/rdf-schema#comment> "An Organization offers a Good (Product or Service)"@en .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadoffers> <http://www.w3.org/2000/01/rdf-schema#comment> "Una Organizacion ofrece un Bien (producto o servicio)"@es .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadoffers> <http://www.w3.org/2000/01/rdf-schema#label> "offers"@en .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadoffers> <http://www.w3.org/2000/01/rdf-schema#label> "ofrece"@es .
+# 
+# http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadparticipatesIn
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadparticipatesIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadparticipatesIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Organization> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadparticipatesIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/bibo/Article> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadparticipatesIn> <http://www.w3.org/2000/01/rdf-schema#comment> "An Organization participates in a Publication"@en .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadparticipatesIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Una Organizacion esta involucrada en una Publicacion"@es .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadparticipatesIn> <http://www.w3.org/2000/01/rdf-schema#label> "participaEn"@es .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadparticipatesIn> <http://www.w3.org/2000/01/rdf-schema#label> "participatesIn"@en .
+# 
+# http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadsigns
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadsigns> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadsigns> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadsigns> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Organization> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadsigns> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/procurement/public-contracts#Contract> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadsigns> <http://www.w3.org/2000/01/rdf-schema#comment> "An Organization signs a Contract."@en .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadsigns> <http://www.w3.org/2000/01/rdf-schema#comment> "Una Organizacion firma un Contrato."@es .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadsigns> <http://www.w3.org/2000/01/rdf-schema#label> "firma"@es .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadsigns> <http://www.w3.org/2000/01/rdf-schema#label> "signs"@en .
+# 
+# http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadworksIn
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadworksIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadworksIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Organization> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadworksIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://usefulinc.com/ns/doap#Project> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadworksIn> <http://www.w3.org/2000/01/rdf-schema#comment> "An Organization works in a Project"@en .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadworksIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Una Organizacion trabaja en un Proyecto"@es .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadworksIn> <http://www.w3.org/2000/01/rdf-schema#label> "trabajaEn"@es .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadworksIn> <http://www.w3.org/2000/01/rdf-schema#label> "worksIn"@en .
+# 
+# http://www.w3.org/2002/07/owl#topObjectProperty
+<http://www.w3.org/2002/07/owl#topObjectProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Organization> .
+<http://www.w3.org/2002/07/owl#topObjectProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/procurement/public-contracts#Contract> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhasCode
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhasCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhasCode> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhasCode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadClassificationCode> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhasCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhasCode> <http://www.w3.org/2000/01/rdf-schema#label> "hasCode"@en .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhasCode> <http://www.w3.org/2000/01/rdf-schema#label> "tiene c\u00F3digo"@es .
+# 
+# http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadscope
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadscope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadscope> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadGood> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadscope> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadscope> <http://www.w3.org/2000/01/rdf-schema#label> "ambito"@es .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadscope> <http://www.w3.org/2000/01/rdf-schema#label> "scope"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadClassification
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadClassification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadClassification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadClassification> <http://www.w3.org/2000/01/rdf-schema#label> "Clasificacion"@es .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadClassification> <http://www.w3.org/2000/01/rdf-schema#label> "Classification"@en .
+# 
+# http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadClassificationCode
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadClassificationCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadClassificationCode> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadClassificationCode> <http://www.w3.org/2000/01/rdf-schema#comment> "Clase que representa una relaci\u00F3n n-aria con respecto a clasificaciones existentes."@es .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadClassificationCode> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represent a n-ary relation with existing classifications."@en .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadClassificationCode> <http://www.w3.org/2000/01/rdf-schema#label> "ClassificationCode"@en .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadClassificationCode> <http://www.w3.org/2000/01/rdf-schema#label> "Codigo de Clasificaci\u00F3n"@es .
+# 
+# http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptCPV
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptCPV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptCPV> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadClassificationCode> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptCPV> <http://www.w3.org/2000/01/rdf-schema#label> "ClassificationCodeCPV"@en .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptCPV> <http://www.w3.org/2000/01/rdf-schema#label> "CodigodeClasificacionCPV"@es .
+# 
+# http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptIPC
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptIPC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptIPC> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadClassificationCode> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptIPC> <http://www.w3.org/2000/01/rdf-schema#label> "ClassificationCodeIPC"@en .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptIPC> <http://www.w3.org/2000/01/rdf-schema#label> "CodigodeClasificacionIPC"@es .
+# 
+# http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptIncibe
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptIncibe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptIncibe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadClassificationCode> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptIncibe> <http://www.w3.org/2000/01/rdf-schema#label> "ClassificationCodeIncibe"@en .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptIncibe> <http://www.w3.org/2000/01/rdf-schema#label> "CodigodeClasificacionIncibe"@es .
+# 
+# http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptInteco
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptInteco> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptInteco> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadClassificationCode> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptInteco> <http://www.w3.org/2000/01/rdf-schema#label> "ClassificationCodeInteco"@en .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptInteco> <http://www.w3.org/2000/01/rdf-schema#label> "CodigodeClasificacionInteco"@es .
+# 
+# http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptNCL
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptNCL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptNCL> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadClassificationCode> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptNCL> <http://www.w3.org/2000/01/rdf-schema#label> "ClassificationCodeNCL"@en .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptNCL> <http://www.w3.org/2000/01/rdf-schema#label> "CodigodeClasificacionNCL"@es .
+# 
+# http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptSchemeCPV
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptSchemeCPV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptSchemeCPV> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadClassification> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptSchemeCPV> <http://www.w3.org/2000/01/rdf-schema#label> "ClasificacionCPV"@es .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptSchemeCPV> <http://www.w3.org/2000/01/rdf-schema#label> "ClassificationCPV"@en .
+# 
+# http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptSchemeIPC
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptSchemeIPC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptSchemeIPC> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadClassification> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptSchemeIPC> <http://www.w3.org/2000/01/rdf-schema#label> "ClasificacionIPC"@es .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptSchemeIPC> <http://www.w3.org/2000/01/rdf-schema#label> "ClassificationIPC"@en .
+# 
+# http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptSchemeIncibe
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptSchemeIncibe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptSchemeIncibe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadClassification> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptSchemeIncibe> <http://www.w3.org/2000/01/rdf-schema#label> "ClasificacionIncibe"@es .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptSchemeIncibe> <http://www.w3.org/2000/01/rdf-schema#label> "ClassificationIncibe"@en .
+# 
+# http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptSchemeInteco
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptSchemeInteco> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptSchemeInteco> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadClassification> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptSchemeInteco> <http://www.w3.org/2000/01/rdf-schema#label> "ClasificacionInteco"@es .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptSchemeInteco> <http://www.w3.org/2000/01/rdf-schema#label> "ClassificationInteco"@en .
+# 
+# http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptSchemeNCL
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptSchemeNCL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptSchemeNCL> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadClassification> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptSchemeNCL> <http://www.w3.org/2000/01/rdf-schema#label> "ClasificacionNCL"@es .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptSchemeNCL> <http://www.w3.org/2000/01/rdf-schema#label> "ClassificationNCL"@en .
+# 
+# http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptSchemeUNSPSC
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptSchemeUNSPSC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptSchemeUNSPSC> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadClassification> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptSchemeUNSPSC> <http://www.w3.org/2000/01/rdf-schema#label> "ClasificacionUNSPSC"@es .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptSchemeUNSPSC> <http://www.w3.org/2000/01/rdf-schema#label> "ClassificationUNSPSC"@en .
+# 
+# http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptUNSPSC
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptUNSPSC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptUNSPSC> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadClassificationCode> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptUNSPSC> <http://www.w3.org/2000/01/rdf-schema#label> "ClassificationCodeUNSPSC"@en .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptUNSPSC> <http://www.w3.org/2000/01/rdf-schema#label> "CodigodeClasificacionUNSPSC"@es .
+# 
+# http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadFunctionality
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadFunctionality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadFunctionality> <http://www.w3.org/2000/01/rdf-schema#label> "Funcionalidad"@es .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadFunctionality> <http://www.w3.org/2000/01/rdf-schema#label> "Functionality"@en .
+# 
+# http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadGood
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadGood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadGood> <http://www.w3.org/2002/07/owl#equivalentClass> <http://purl.org/goodrelations/v1#ProductOrService> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadGood> <http://www.w3.org/2000/01/rdf-schema#comment> "Todo aquello que es apto para satisfacer, directa o indirectamente, una necesidad humana (RAE)."@es .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadGood> <http://www.w3.org/2000/01/rdf-schema#label> "Bien"@es .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadGood> <http://www.w3.org/2000/01/rdf-schema#label> "Good"@en .
+# 
+# http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadPattentApplication
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadPattentApplication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadPattentApplication> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.epo.org/linked-data/def/patent/ApplicationKind> .
+<http://data.epo.org/linked-data/def/patent/ApplicationKind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadPattentApplication> <http://www.w3.org/2000/01/rdf-schema#comment> "Documento expedido por una autoridad en que se acredita una condici\u00F3n o un m\u00E9rito o se da la autorizaci\u00F3n para hacer algo."@es .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadPattentApplication> <http://www.w3.org/2000/01/rdf-schema#label> "Patent"@en .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadPattentApplication> <http://www.w3.org/2000/01/rdf-schema#label> "Patente"@es .
+# 
+# http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadPrivateOrganization
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadPrivateOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadPrivateOrganization> <http://www.w3.org/2002/07/owl#equivalentClass> <http://purl.org/goodrelations/v1#BusinessEntity> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadPrivateOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Organization> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadPrivateOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "Empresa:  Unidad de organizaci\u00F3n dedicada a actividades industriales, mercantiles o de prestaci\u00F3n de servicios con fines lucrativos. (RAE)"@es .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadPrivateOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "EmpresaPrivada"@es .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadPrivateOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "PrivateOrganization\nCompany"@en .
+# 
+# http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadProduct
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadProduct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadGood> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadProduct> <http://www.w3.org/2000/01/rdf-schema#label> "Product"@en .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadProduct> <http://www.w3.org/2000/01/rdf-schema#label> "Producto"@es .
+# 
+# http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadPublicOrganization
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadPublicOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadPublicOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Organization> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadPublicOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "Organizaci\u00F3n P\u00FAblica: Organizaci\u00F3n con fines administrativos, representativos, de resoluci\u00F3n o servicios (organismos gubernamentales)."@es .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadPublicOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "EmpresaPublica"@es .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadPublicOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "PublicOrganization"@en .
+# 
+# http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadService
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadGood> .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadService> <http://www.w3.org/2000/01/rdf-schema#label> "Service"@en .
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadService> <http://www.w3.org/2000/01/rdf-schema#label> "Servicio"@es .
+# 
+# http://data.epo.org/linked-data/def/patent/ApplicationKind
+# 
+# http://purl.org/goodrelations/v1#BusinessEntity
+# 
+# http://purl.org/goodrelations/v1#ProductOrService
+# 
+# http://purl.org/procurement/public-contracts#Contract
+<http://purl.org/procurement/public-contracts#Contract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/procurement/public-contracts#Contract> <http://www.w3.org/2000/01/rdf-schema#comment> "Acuerdo, generalmente escrito, por el que dos o m\u00E1s partes se comprometen rec\u00EDprocamente a respetar y cumplir una serie de condiciones"@es .
+<http://purl.org/procurement/public-contracts#Contract> <http://www.w3.org/2000/01/rdf-schema#label> "Contract"@en .
+<http://purl.org/procurement/public-contracts#Contract> <http://www.w3.org/2000/01/rdf-schema#label> "Contrato"@es .
+# 
+# http://purl.org/procurement/public-contracts#Tender
+<http://purl.org/procurement/public-contracts#Tender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/

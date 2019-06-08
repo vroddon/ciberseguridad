@@ -1,0 +1,372 @@
+@prefix : <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridad#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridad> .
+
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridad> rdf:type owl:Ontology ;
+                                                             owl:imports <http://contsem.unizar.es/def/sector-publico/pproc> ,
+                                                                         <http://data.epo.org/linked-data/def/patent/> ,
+                                                                         <http://minetur.linkeddata.es/def/ontologiaProductos#> ,
+                                                                         <http://purl.org/ontology/bibo/> ,
+                                                                         <http://usefulinc.com/ns/doap#> ,
+                                                                         <http://www.w3.org/ns/org#> ;
+                                                             <http://purl.org/dc/terms/contributor> """Socorro Bernardos (OEG-UPM)
+María Poveda-Villalón (OEG-UPM)
+Edna Ruckhaus (OEG-UPM)"""^^xsd:string ;
+                                                             <http://purl.org/dc/terms/creator> "Mari Carmen Suárez-Figueroa (OEG-UPM)"^^xsd:string ;
+                                                             <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
+                                                             rdfs:comment "Esta ontología de ciberseguridad se basa en (a) la actualización y mejora de una ontología existente de productos de ciberseguridad (http://minetur.linkeddata.es/def/ontologiaProductos), y (b) su extensión a partir de nuevas clasificaciones, incluyendo mappings y sinónimos, así como términos extraídos de los corpus disponibles."@es ;
+                                                             rdfs:label "Ontologia de Ciberseguridad"@es .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadcallsFor
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadcallsFor> rdf:type owl:ObjectProperty ;
+                                                                    rdfs:domain <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadPublicOrganization> ;
+                                                                    rdfs:range <http://purl.org/procurement/public-contracts#Tender> ;
+                                                                    rdfs:comment "A public organization calls for a tender."@en ,
+                                                                                 "Una Organizacion Publica convoca una Licitacion."@es ;
+                                                                    rdfs:label "callsFor"@en ,
+                                                                               "convoca"@es .
+
+
+###  http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhas
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhas> rdf:type owl:ObjectProperty ;
+                                                               rdfs:subPropertyOf owl:topObjectProperty ;
+                                                               rdfs:domain <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadGood> ;
+                                                               rdfs:range <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadFunctionality> ;
+                                                               rdfs:comment "A Good has associated a Functionality"@en ,
+                                                                            "Un Bien tiene asociadas Funcionalidades"@es ;
+                                                               rdfs:label "has"@en ,
+                                                                          "tiene"@es .
+
+
+###  http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhasAssociated
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhasAssociated> rdf:type owl:ObjectProperty ;
+                                                                         rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                         rdfs:domain <http://purl.org/procurement/public-contracts#Tender> ;
+                                                                         rdfs:range <http://purl.org/procurement/public-contracts#Contract> ;
+                                                                         rdfs:comment "A Tender has associated a Contract."@en ,
+                                                                                      "Una Licitacion tiene asociado un Contrato."@es ;
+                                                                         rdfs:label "hasAssociated"@en ,
+                                                                                    "tiene asociado"@es .
+
+
+###  http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhasClassificationCode
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhasClassificationCode> rdf:type owl:ObjectProperty ;
+                                                                                 rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                                 rdfs:domain <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadGood> ;
+                                                                                 rdfs:range <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadClassificationCode> ;
+                                                                                 rdfs:label "hasClassificationCode"@en ,
+                                                                                            "tieneCodigoDeClasificacion"@es .
+
+
+###  http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhasClassificationCodeofPatent
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhasClassificationCodeofPatent> rdf:type owl:ObjectProperty ;
+                                                                                         rdfs:domain <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadPattentApplication> ;
+                                                                                         rdfs:range <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadClassificationCode> ;
+                                                                                         rdfs:label "hasClassificationCodeOfPatent"@en ,
+                                                                                                    "tieneCodigodeClasificacion"@es .
+
+
+###  http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhasClassificationCodeofTender
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhasClassificationCodeofTender> rdf:type owl:ObjectProperty ;
+                                                                                         rdfs:domain <http://purl.org/procurement/public-contracts#Tender> ;
+                                                                                         rdfs:range <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadClassificationCode> ;
+                                                                                         rdfs:label "hasClassificationCodeOfTender"@en ,
+                                                                                                    "tieneCodigodeClasificacion"@es .
+
+
+###  http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadinvolves
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadinvolves> rdf:type owl:ObjectProperty ;
+                                                                    rdfs:domain <http://purl.org/procurement/public-contracts#Contract> ;
+                                                                    rdfs:range <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadGood> ;
+                                                                    rdfs:comment "A Contract involves a Good"@en ,
+                                                                                 "Un Contrato involucra un Bien"@es ;
+                                                                    rdfs:label "involucra"@es ,
+                                                                               "involves"@en .
+
+
+###  http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadisAffectedBy
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadisAffectedBy> rdf:type owl:ObjectProperty ;
+                                                                        rdfs:domain <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadGood> ;
+                                                                        rdfs:range <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadPattentApplication> ;
+                                                                        rdfs:comment "A Good is affected by a Patent"@en ,
+                                                                                     "Un Bien esta afectado por una Patente"@es ;
+                                                                        rdfs:label "estaAfectadoPor"@es ,
+                                                                                   "isAffectedBy"@en .
+
+
+###  http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadisOwnerOF
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadisOwnerOF> rdf:type owl:ObjectProperty ;
+                                                                     rdfs:domain <http://xmlns.com/foaf/0.1/Organization> ;
+                                                                     rdfs:range <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadPattentApplication> ;
+                                                                     rdfs:comment "An Organization is owner of a Patent (PatentApplication)."@en ,
+                                                                                  "Una Organización es propietaria de una Patente."@es ;
+                                                                     rdfs:label "es propietario de"@es ,
+                                                                                "isOwnerOf"@en .
+
+
+###  http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadoffers
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadoffers> rdf:type owl:ObjectProperty ;
+                                                                  rdfs:domain <http://xmlns.com/foaf/0.1/Organization> ;
+                                                                  rdfs:range <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadGood> ;
+                                                                  rdfs:comment ""@es ,
+                                                                               "An Organization offers a Good (Product or Service)"@en ,
+                                                                               "Una Organizacion ofrece un Bien (producto o servicio)"@es ;
+                                                                  rdfs:label "offers"@en ,
+                                                                             "ofrece"@es .
+
+
+###  http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadparticipatesIn
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadparticipatesIn> rdf:type owl:ObjectProperty ;
+                                                                          rdfs:domain <http://xmlns.com/foaf/0.1/Organization> ;
+                                                                          rdfs:range <http://purl.org/ontology/bibo/Article> ;
+                                                                          rdfs:comment "An Organization participates in a Publication"@en ,
+                                                                                       "Una Organizacion esta involucrada en una Publicacion"@es ;
+                                                                          rdfs:label "participaEn"@es ,
+                                                                                     "participatesIn"@en .
+
+
+###  http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadsigns
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadsigns> rdf:type owl:ObjectProperty ;
+                                                                 rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                 rdfs:domain <http://xmlns.com/foaf/0.1/Organization> ;
+                                                                 rdfs:range <http://purl.org/procurement/public-contracts#Contract> ;
+                                                                 rdfs:comment "An Organization signs a Contract."@en ,
+                                                                              "Una Organizacion firma un Contrato."@es ;
+                                                                 rdfs:label "firma"@es ,
+                                                                            "signs"@en .
+
+
+###  http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadworksIn
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadworksIn> rdf:type owl:ObjectProperty ;
+                                                                   rdfs:domain <http://xmlns.com/foaf/0.1/Organization> ;
+                                                                   rdfs:range <http://usefulinc.com/ns/doap#Project> ;
+                                                                   rdfs:comment "An Organization works in a Project"@en ,
+                                                                                "Una Organizacion trabaja en un Proyecto"@es ;
+                                                                   rdfs:label "trabajaEn"@es ,
+                                                                              "worksIn"@en .
+
+
+###  http://www.w3.org/2002/07/owl#topObjectProperty
+owl:topObjectProperty rdfs:domain <http://xmlns.com/foaf/0.1/Organization> ;
+                      rdfs:range <http://purl.org/procurement/public-contracts#Contract> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhasCode
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadhasCode> rdf:type owl:DatatypeProperty ;
+                                                                   rdfs:subPropertyOf owl:topDataProperty ;
+                                                                   rdfs:domain <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadClassificationCode> ;
+                                                                   rdfs:range xsd:string ;
+                                                                   rdfs:label "hasCode"@en ,
+                                                                              "tiene código"@es .
+
+
+###  http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadscope
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadscope> rdf:type owl:DatatypeProperty ;
+                                                                 rdfs:domain <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadGood> ;
+                                                                 rdfs:range xsd:string ;
+                                                                 rdfs:label "ambito"@es ,
+                                                                            "scope"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadClassification
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadClassification> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                                          rdfs:label "Clasificacion"@es ,
+                                                                                     "Classification"@en .
+
+
+###  http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadClassificationCode
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadClassificationCode> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                              rdfs:comment "Clase que representa una relación n-aria con respecto a clasificaciones existentes."@es ,
+                                                                                           "This class represent a n-ary relation with existing classifications."@en ;
+                                                                              rdfs:label "ClassificationCode"@en ,
+                                                                                         "Codigo de Clasificación"@es .
+
+
+###  http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptCPV
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptCPV> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadClassificationCode> ;
+                                                                      rdfs:label "ClassificationCodeCPV"@en ,
+                                                                                 "CodigodeClasificacionCPV"@es .
+
+
+###  http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptIPC
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptIPC> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadClassificationCode> ;
+                                                                      rdfs:label "ClassificationCodeIPC"@en ,
+                                                                                 "CodigodeClasificacionIPC"@es .
+
+
+###  http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptIncibe
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptIncibe> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadClassificationCode> ;
+                                                                         rdfs:label "ClassificationCodeIncibe"@en ,
+                                                                                    "CodigodeClasificacionIncibe"@es .
+
+
+###  http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptInteco
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptInteco> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadClassificationCode> ;
+                                                                         rdfs:label "ClassificationCodeInteco"@en ,
+                                                                                    "CodigodeClasificacionInteco"@es .
+
+
+###  http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptNCL
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptNCL> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadClassificationCode> ;
+                                                                      rdfs:label "ClassificationCodeNCL"@en ,
+                                                                                 "CodigodeClasificacionNCL"@es .
+
+
+###  http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptSchemeCPV
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptSchemeCPV> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadClassification> ;
+                                                                            rdfs:label "ClasificacionCPV"@es ,
+                                                                                       "ClassificationCPV"@en .
+
+
+###  http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptSchemeIPC
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptSchemeIPC> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadClassification> ;
+                                                                            rdfs:label "ClasificacionIPC"@es ,
+                                                                                       "ClassificationIPC"@en .
+
+
+###  http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptSchemeIncibe
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptSchemeIncibe> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadClassification> ;
+                                                                               rdfs:label "ClasificacionIncibe"@es ,
+                                                                                          "ClassificationIncibe"@en .
+
+
+###  http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptSchemeInteco
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptSchemeInteco> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadClassification> ;
+                                                                               rdfs:label "ClasificacionInteco"@es ,
+                                                                                          "ClassificationInteco"@en .
+
+
+###  http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptSchemeNCL
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptSchemeNCL> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadClassification> ;
+                                                                            rdfs:label "ClasificacionNCL"@es ,
+                                                                                       "ClassificationNCL"@en .
+
+
+###  http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptSchemeUNSPSC
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptSchemeUNSPSC> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadClassification> ;
+                                                                               rdfs:label "ClasificacionUNSPSC"@es ,
+                                                                                          "ClassificationUNSPSC"@en .
+
+
+###  http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptUNSPSC
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadConceptUNSPSC> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadClassificationCode> ;
+                                                                         rdfs:label "ClassificationCodeUNSPSC"@en ,
+                                                                                    "CodigodeClasificacionUNSPSC"@es .
+
+
+###  http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadFunctionality
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadFunctionality> rdf:type owl:Class ;
+                                                                         rdfs:label "Funcionalidad"@es ,
+                                                                                    "Functionality"@en .
+
+
+###  http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadGood
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadGood> rdf:type owl:Class ;
+                                                                owl:equivalentClass <http://purl.org/goodrelations/v1#ProductOrService> ;
+                                                                rdfs:comment "Todo aquello que es apto para satisfacer, directa o indirectamente, una necesidad humana (RAE)."@es ;
+                                                                rdfs:label "Bien"@es ,
+                                                                           "Good"@en .
+
+
+###  http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadPattentApplication
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadPattentApplication> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <http://data.epo.org/linked-data/def/patent/ApplicationKind> ;
+                                                                              rdfs:comment "Documento expedido por una autoridad en que se acredita una condición o un mérito o se da la autorización para hacer algo."@es ;
+                                                                              rdfs:label "Patent"@en ,
+                                                                                         "Patente"@es .
+
+
+###  http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadPrivateOrganization
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadPrivateOrganization> rdf:type owl:Class ;
+                                                                               owl:equivalentClass <http://purl.org/goodrelations/v1#BusinessEntity> ;
+                                                                               rdfs:subClassOf <http://xmlns.com/foaf/0.1/Organization> ;
+                                                                               rdfs:comment "Empresa:  Unidad de organización dedicada a actividades industriales, mercantiles o de prestación de servicios con fines lucrativos. (RAE)"@es ;
+                                                                               rdfs:label "EmpresaPrivada"@es ,
+                                                                                          """PrivateOrganization
+Company"""@en .
+
+
+###  http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadProduct
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadProduct> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadGood> ;
+                                                                   rdfs:label "Product"@en ,
+                                                                              "Producto"@es .
+
+
+###  http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadPublicOrganization
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadPublicOrganization> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <http://xmlns.com/foaf/0.1/Organization> ;
+                                                                              rdfs:comment "Organización Pública: Organización con fines administrativos, representativos, de resolución o servicios (organismos gubernamentales)."@es ;
+                                                                              rdfs:label "EmpresaPublica"@es ,
+                                                                                         "PublicOrganization"@en .
+
+
+###  http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadService
+<http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadService> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://ciberseg.linkeddata.es/def/OntologiaCiberseguridadGood> ;
+                                                                   rdfs:label "Service"@en ,
+                                                                              "Servicio"@es .
+
+
+###  http://data.epo.org/linked-data/def/patent/ApplicationKind
+<http://data.epo.org/linked-data/def/patent/ApplicationKind> rdf:type owl:Class .
+
+
+###  http://purl.org/goodrelations/v1#BusinessEntity
+
+###  http://purl.org/goodrelations/v1#ProductOrService
+
+###  http://purl.org/procurement/public-contracts#Contract
+<http://purl.org/procurement/public-contracts#Contract> rdf:type owl:Class ;
+                                                        rdfs:comment "Acuerdo, generalmente escrito, por el que dos o más partes se comprometen recíprocamente a respetar y cumplir una serie de condiciones"@es ;
+                                                        rdfs:label "Contract"@en ,
+                                                                   "Contrato"@es .
+
+
+###  http://purl.org/procurement/public-contracts#Tender
+<http://purl.org/procurement/public-contracts#Tender> rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/

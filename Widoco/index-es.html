@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />   
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"TechArticle","url":"http://ciberseg.linkeddata.es/def/OntologiaCiberseguridad","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://ciberseg.linkeddata.es/def/OntologiaCiberseguridad","name":"http://ciberseg.linkeddata.es/def/OntologiaCiberseguridad", "headline":"Document describing the ontology http://ciberseg.linkeddata.es/def/OntologiaCiberseguridad", "datePublished":"Wed Dec 19 18:11:31 CET 2018", "license":"http://purl.org/NET/rdflicense/cc-by4.0", "author":[{"@type":"Person","name":"Mari Carmen Suárez-Figueroa (OEG-UPM)"}], "contributor":[{"@type":"Person","name":"Socorro Bernardos (OEG-UPM)
+María Poveda-Villalón (OEG-UPM)
+Edna Ruckhaus (OEG-UPM)"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Tabla de contenidos</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).text()+'</a></li>';
+		}
+		t = t.replace(' volver a índice','');
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+    $(function(){
+      $("#abstract").load("sections/abstract-es.html"); 
+      $("#introduction").load("sections/introduction-es.html"); 
+      $("#overview").load("sections/overview-es.html"); 
+      $("#description").load("sections/description-es.html"); 
+      $("#references").load("sections/references-es.html"); 
+      $("#crossref").load("sections/crossref-es.html", null, loadHash); 
+    });
+    </script> 
+  </head> 
+
+<body>
+<div class="container"><div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> <a href="index-es.html"><b>es</b></a> </div>
+<dl><dt>Título:</dt>
+<dd><a href="http://ciberseg.linkeddata.es/def/OntologiaCiberseguridad#">Ontología de ciberseguridad</a></dd></dl>
+
+<dl><dt>URI:</dt>
+<dd><a href="http://ciberseg.linkeddata.es/def/OntologiaCiberseguridad#">http://ciberseg.linkeddata.es/def/OntologiaCiberseguridad#</a></dd></dl>
+
+<dl><dt>Autores:</dt>
+<dd>Mari Carmen Suárez-Figueroa (OEG-UPM)</dd></dl>
+
+<dl><dt>Colaboradores:</dt>
+<dd>Socorro Bernardos (OEG-UPM)
+María Poveda-Villalón (OEG-UPM)
+Edna Ruckhaus (OEG-UPM)</dd></dl>
+
+<dl><dt>Ontolog&iacute;as importadas:</dt>
+<dd><a href="http://contsem.unizar.es/def/sector-publico/pproc#">pproc#</a></dd><dd><a href="http://data.epo.org/linked-data/def/patent/"><http://data.epo.org/linked-data/def/patent/></a></dd><dd><a href="http://minetur.linkeddata.es/def/ontologiaProductos#">ontologiaProductos#</a></dd><dd><a href="http://www.w3.org/2004/02/skos/core">core</a></dd><dd><a href="http://purl.org/ontology/bibo/"><http://purl.org/ontology/bibo/></a></dd><dd><a href="http://usefulinc.com/ns/doap#">doap#</a></dd><dd><a href="http://xmlns.com/foaf/0.1/"><http://xmlns.com/foaf/0.1/></a></dd><dd><a href="http://www.w3.org/ns/org#">org#</a></dd></dl>
+
+<dl><dt>Descargar serializaci&oacute;n:</dt><dd><span><a href="ontology.xml" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML"></img></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples"></img></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL"></img></a> </span></dd></dl><dl><dt>Licencia:  </dt><dd><a href="http://purl.org/NET/rdflicense/cc-by4.0" target="_blank"><img src ="https://img.shields.io/badge/License-Creative Commons CC_BY-blue.svg" alt="http://purl.org/NET/rdflicense/cc-by4.0"></img></a>
+</dd></dl><dl><dt>Visualizaci&oacute;n:</dt><dd><a href="webvowl/index.html#ontology" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl"></img></a></dd></dl>
+<hr/>
+</div>
+<div class="status">
+<div>
+<span>Especificación de ontología</span>
+</div>
+</div>     <div id="abstract"></div>
+<div id="toc"></div>     <div id="introduction"></div>
+     <div id="overview"></div>
+     <div id="description"></div>
+     <div id="crossref"></div>
+<div id="acknowledgements">
+<h2 id="ack" class="list">Agradecimientos <span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h2>
+<p>Los autores agradecen a <a href="http://www.essepuntato.it/">Silvio Peroni</a> el desarrollo de <a href="http://www.essepuntato.it/lode">LODE</a>, un entorno de documentaci&oacute;n para OWL que es usado para generar la descripci&oacute;n de t&eacute;rminos de la ontolog&iacute;a de este documento; y a  <a href="http://purl.org/net/dgarijo">Daniel Garijo</a> por desarrollar <a href="https://github.com/dgarijo/Widoco">Widoco</a>, el programa utilizado para producir la plantilla en la que se basa este documento.</p>
+</div>
+</body> 
+</html>
