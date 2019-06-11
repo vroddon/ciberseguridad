@@ -10,6 +10,6 @@ public class HomeController {
 
     @RequestMapping("/")
     public String home(){
-        return "<html>Indicadores de ciberseguridad. <a href=\"swagger-ui.html\">Documentación</a> de la API</html>";
+        return "<html>Indicadores de ciberseguridad. <a href=\"swagger-ui.html\">Documentación</a> de la API. See also the <a href=\"http://ciberseg.linkeddata.es/def/ontologiaciberseguridad/index-es.html#\">ontology</a></html>";
     }
 }
