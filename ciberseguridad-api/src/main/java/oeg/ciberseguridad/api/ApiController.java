@@ -5,6 +5,7 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
+import static oeg.ciberseguridad.core.ManagerPatent.getPatents;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -21,8 +22,8 @@ public class ApiController {
     @ApiOperation(value = "Obtiene indicadores de ciberseguridad basados en patentes", notes = "Not documented.", response = String.class)
     @ApiResponses(value = {@ApiResponse(code = 200, message = "Success"),@ApiResponse(code = 403, message = "Not authorized"),@ApiResponse(code = 500, message = "Internal error")})
     @RequestMapping(value = "/patentes", method = RequestMethod.GET)
-    public String patentes(@RequestParam(value = "year", defaultValue = "") String param) {
-        return "Victor Rodriguez Doncel - Ontology Engineering Group";
+    public String patentes(@RequestParam(value = "year", defaultValue = "") String year) {
+                return getPatents("cyber security", year);
     }
     
     @ApiOperation(value = "Internal operations", notes = "Not documented.", response = String.class)
