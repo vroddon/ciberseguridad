@@ -1,4 +1,4 @@
-package oeg.ciberseguridad.data.ch;
+package oeg.ciberseguridad.data;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -61,7 +61,7 @@ public class CompaniesHouse {
                 //               Integer value = entry.getValue();
                 System.out.println(key + "\t" + value);
                 count3++;
-                if (count3 == 11) {
+                if (count3 == 13) {
                     break;
                 }
             }
